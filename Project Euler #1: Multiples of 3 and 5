@@ -1,0 +1,17 @@
+#!/bin/python3
+
+import sys
+
+def sum_of_multiples(n):
+    n -= 1
+    sum_three = (3 * (n // 3) * (n // 3 + 1)) // 2
+    sum_five = (5 * (n // 5) * (n // 5 + 1)) // 2
+    sum_fifteen = (15 * (n // 15) * (n // 15 + 1)) // 2
+    total_sum = sum_three + sum_five - sum_fifteen
+    return total_sum
+
+t = int(input().strip())
+for a0 in range(t):
+    n = int(input().strip())
+    result = sum_of_multiples(n)
+    print(result)
