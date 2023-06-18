@@ -1,0 +1,21 @@
+import sys
+
+def fibonacci_sum_even(N):
+    prev = 1
+    curr = 2
+    fib_sum = 0
+
+    while curr <= N:
+        if curr % 2 == 0:
+            fib_sum += curr
+        next_term = prev + curr
+        prev = curr
+        curr = next_term
+
+    return fib_sum
+
+t = int(input().strip())
+for a0 in range(t):
+    n = int(input().strip())
+    result = fibonacci_sum_even(n)
+    print(result)
